@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "okr_attainment_scorer",
+  "description": "Calculates composite OKR attainment percentage across weighted key result milestones",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "okr_data_json": {
+        "type": "string",
+        "description": "JSON array of objects with weight (float) and completion_pct (float)"
+      }
+    },
+    "required": [
+      "okr_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

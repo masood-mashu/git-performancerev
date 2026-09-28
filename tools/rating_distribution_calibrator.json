@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "rating_distribution_calibrator",
+  "description": "Audits departmental performance rating curve to ensure top tier does not exceed 20.0%",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "ratings_json": {
+        "type": "string",
+        "description": "JSON string containing top_tier_count and total_employees"
+      }
+    },
+    "required": [
+      "ratings_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

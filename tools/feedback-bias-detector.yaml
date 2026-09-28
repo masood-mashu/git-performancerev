@@ -1,0 +1,18 @@
+name: feedback-bias-detector
+version: 1.0.0
+description: "Detects subjective gendered or biased adjectives in performance review text"
+input_schema:
+  type: object
+  properties:
+    feedback_text:
+      type: string
+      description: "Narrative paragraph of peer or manager review feedback"
+  required:
+    - feedback_text
+implementation:
+  type: script
+  path: feedback_bias_detector.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "feedback_bias_detector",
+  "description": "Detects subjective gendered or biased adjectives in performance review text",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "feedback_text": {
+        "type": "string",
+        "description": "Narrative paragraph of peer or manager review feedback"
+      }
+    },
+    "required": [
+      "feedback_text"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

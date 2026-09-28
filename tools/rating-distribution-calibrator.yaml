@@ -1,0 +1,18 @@
+name: rating-distribution-calibrator
+version: 1.0.0
+description: "Audits departmental performance rating curve to ensure top tier does not exceed 20.0%"
+input_schema:
+  type: object
+  properties:
+    ratings_json:
+      type: string
+      description: "JSON string containing top_tier_count and total_employees"
+  required:
+    - ratings_json
+implementation:
+  type: script
+  path: rating_distribution_calibrator.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-performancerev
+version: 1.0.0
+description: "Autonomous Quarterly OKR Calibration, Unconscious Bias & Peer Feedback Synthesis Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - okr-attainment-evaluation
+  - performance-bias-auditing
+
+tools:
+  - okr-attainment-scorer
+  - feedback-bias-detector
+  - rating-distribution-calibrator
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - hr-recruiting
+  - performance-management
+  - okr-calibration
+  - bias-detection
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-performancerev-01"
+  passport_category: "HR & recruiting"
